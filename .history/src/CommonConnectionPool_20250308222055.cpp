@@ -100,23 +100,16 @@ void ConnectionPool::produceConnectionTask()
 shared_ptr<Connection> ConnectionPool::getConnection()
 {
     unique_lock<mutex> lock(_queueMutex);
-    while (_connectionQueue.empty()) {
-        if (cv_status::timeout == _cv.wait_for(lock, chrono::seconds(_connectionTimeout))) {
+    if (_connectionQueue.empty()) {
+        _cv.wait_for(lock, chrono::seconds(_connectionTimeout)); // 等待超时
+        if (_connectionQueue.empty()) {
             LOG("get connection timeout, get connection failed!");
             return nullptr;
         }
     }
 
-    // shared_ptr智能指针析构时，会自动调用Connection的析构函数，释放连接，connection被close。
-    // 这里需要自定义shared_ptr的析构函数，不要调用Connection的析构函数，否则会释放连接。
-
-    shared_ptr<Connection> sp(_connectionQueue.front(), 
-        [&](Connection* conn) {
-            // 在服务器应用线程中调用，要考虑队列的线程安全操作
-            unique_lock<mutex> lock(_queueMutex);
-            _connectionQueue.push(conn);
-    });
+    shared_ptr<Connection> sp(_connectionQueue.front());
     _connectionQueue.pop();
-    _cv.notify_all(); // 消费完连接，通知生产者线程，检查队列是否为空，生产新连接
+    _cv.notify_all(); // 通知生产者线程，队列不满
     return sp;
 }
