@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "/home/dingshuo/cpp/ConnectionPool/bin/ConnectionPool"
+			"path" : "/home/dingshuo/ConnectionPool/bin/ConnectionPool"
 		}
 	],
 	"backtrace" : 1,
@@ -53,7 +53,7 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "/home/dingshuo/cpp/ConnectionPool/include"
+					"path" : "/home/dingshuo/ConnectionPool/include"
 				}
 			],
 			"language" : "CXX",

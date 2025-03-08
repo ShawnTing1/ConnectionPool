@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/dingshuo/cpp/ConnectionPool/build"
+			"value" : "/home/dingshuo/ConnectionPool/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -595,7 +595,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/dingshuo/cpp/ConnectionPool"
+			"value" : "/home/dingshuo/ConnectionPool"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1131,7 +1131,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/dingshuo/cpp/ConnectionPool/build"
+			"value" : "/home/dingshuo/ConnectionPool/build"
 		},
 		{
 			"name" : "ConnectionPoll_SOURCE_DIR",
@@ -1143,31 +1143,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/dingshuo/cpp/ConnectionPool"
-		},
-		{
-			"name" : "Project_BINARY_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "/home/dingshuo/cpp/ConnectionPool/build"
-		},
-		{
-			"name" : "Project_SOURCE_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "/home/dingshuo/cpp/ConnectionPool"
+			"value" : "/home/dingshuo/ConnectionPool"
 		}
 	],
 	"kind" : "cache",

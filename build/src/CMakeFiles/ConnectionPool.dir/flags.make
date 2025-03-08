@@ -6,5 +6,5 @@ CXX_FLAGS = -g -g
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/dingshuo/cpp/ConnectionPool/include 
+CXX_INCLUDES = -I/home/dingshuo/ConnectionPool/include 
 

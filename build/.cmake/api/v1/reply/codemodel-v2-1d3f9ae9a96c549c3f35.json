@@ -53,7 +53,7 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "ConnectionPool::@145eef247bfb46b6828c",
-					"jsonFile" : "target-ConnectionPool-Debug-aa5328a5d9c26c745cf5.json",
+					"jsonFile" : "target-ConnectionPool-Debug-45b4ace5ec4fb9684ffc.json",
 					"name" : "ConnectionPool",
 					"projectIndex" : 0
 				}
@@ -63,8 +63,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/dingshuo/cpp/ConnectionPool/build",
-		"source" : "/home/dingshuo/cpp/ConnectionPool"
+		"build" : "/home/dingshuo/ConnectionPool/build",
+		"source" : "/home/dingshuo/ConnectionPool"
 	},
 	"version" : 
 	{

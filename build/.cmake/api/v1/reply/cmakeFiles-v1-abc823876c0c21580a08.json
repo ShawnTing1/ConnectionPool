@@ -138,8 +138,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/home/dingshuo/cpp/ConnectionPool/build",
-		"source" : "/home/dingshuo/cpp/ConnectionPool"
+		"build" : "/home/dingshuo/ConnectionPool/build",
+		"source" : "/home/dingshuo/ConnectionPool"
 	},
 	"version" : 
 	{

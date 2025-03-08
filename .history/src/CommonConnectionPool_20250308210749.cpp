@@ -1,0 +1,22 @@
+#include "pch.h"
+#include "CommonConnectionPool.h"
+#include "public.h"
+
+// // 提前创建单例实例（饿汉模式），程序启动时即初始化，线程安全
+// ConnectionPool* ConnectionPool::_connPool = new ConnectionPool();
+
+ConnectionPool* ConnectionPool::getConnectionPool()
+{
+    static ConnectionPool pool;
+    return &pool;
+}
+
+// 从配置文件中加载配置项
+bool ConnectionPool::loadConfigFile()
+{
+    FILE* pf = fopen("mysql.ini", "r");
+    if (pf == nullptr) {
+        LOG("mysql.ini file is not exist!");
+        return false;
+    }
+}
