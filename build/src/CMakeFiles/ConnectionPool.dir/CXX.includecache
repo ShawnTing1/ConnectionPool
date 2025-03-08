@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/pch.h
+
+/home/dingshuo/cpp/ConnectionPool/src/CommonConnectionPool.cpp
+pch.h
+/home/dingshuo/cpp/ConnectionPool/src/pch.h
+
+/home/dingshuo/cpp/ConnectionPool/src/Connection.cpp
+pch.h
+/home/dingshuo/cpp/ConnectionPool/src/pch.h
+
+/home/dingshuo/cpp/ConnectionPool/src/main.cpp
+pch.h
+/home/dingshuo/cpp/ConnectionPool/src/pch.h
+iostream
+-
+
+/home/dingshuo/cpp/ConnectionPool/src/pch.cpp
+
