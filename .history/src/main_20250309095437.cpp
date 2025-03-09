@@ -12,7 +12,7 @@ int main()
 {
 
     clock_t begin = clock();
-    
+    ConnectionPool* cp = ConnectionPool::GetInstance();
 
     thread t1([]() {
         for (int i = 0; i < 1000; ++i) {
@@ -54,13 +54,9 @@ int main()
         }
     });
 
-    t1.join();
-    t2.join();
-    t3.join();
-    t4.join();
-
     clock_t end = clock();
     cout << "time: " << end - begin << "ms" << endl;
+
 
 #if 0
     for (int i = 0; i < 1000; ++i) {

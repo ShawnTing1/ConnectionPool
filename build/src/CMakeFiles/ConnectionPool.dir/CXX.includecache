@@ -36,26 +36,6 @@ string
 
 ../include/pch.h
 
-../include/public.h
-iostream
--
-
-/home/dingshuo/ConnectionPool/src/CommonConnectionPool.cpp
-pch.h
-/home/dingshuo/ConnectionPool/src/pch.h
-CommonConnectionPool.h
-/home/dingshuo/ConnectionPool/src/CommonConnectionPool.h
-public.h
-/home/dingshuo/ConnectionPool/src/public.h
-
-/home/dingshuo/ConnectionPool/src/Connection.cpp
-pch.h
-/home/dingshuo/ConnectionPool/src/pch.h
-public.h
-/home/dingshuo/ConnectionPool/src/public.h
-Connection.h
-/home/dingshuo/ConnectionPool/src/Connection.h
-
 /home/dingshuo/ConnectionPool/src/main.cpp
 pch.h
 /home/dingshuo/ConnectionPool/src/pch.h

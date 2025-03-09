@@ -15,7 +15,7 @@ int main()
     
 
     thread t1([]() {
-        for (int i = 0; i < 1000; ++i) {
+        for (int i = 0; i < 250; ++i) {
             ConnectionPool* cp = ConnectionPool::GetInstance();
             shared_ptr<Connection> sp = cp->getConnection();
             char sql[1024] = {0};
@@ -25,7 +25,7 @@ int main()
     });
 
     thread t2([]() {
-        for (int i = 0; i < 1000; ++i) {
+        for (int i = 0; i < 250; ++i) {
             ConnectionPool* cp = ConnectionPool::GetInstance();
             shared_ptr<Connection> sp = cp->getConnection();
             char sql[1024] = {0};
@@ -35,7 +35,7 @@ int main()
     });
 
     thread t3([]() {
-        for (int i = 0; i < 1000; ++i) {
+        for (int i = 0; i < 250; ++i) {
             ConnectionPool* cp = ConnectionPool::GetInstance();
             shared_ptr<Connection> sp = cp->getConnection();
             char sql[1024] = {0};
@@ -45,7 +45,7 @@ int main()
     });
 
     thread t4([]() {
-        for (int i = 0; i < 1000; ++i) {
+        for (int i = 0; i < 250; ++i) {
             ConnectionPool* cp = ConnectionPool::GetInstance();
             shared_ptr<Connection> sp = cp->getConnection();
             char sql[1024] = {0};
@@ -53,6 +53,7 @@ int main()
             sp->update(sql);
         }
     });
+
 
     t1.join();
     t2.join();

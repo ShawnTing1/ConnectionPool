@@ -12,11 +12,10 @@ int main()
 {
 
     clock_t begin = clock();
-    
+    ConnectionPool* cp = ConnectionPool::GetInstance();
 
     thread t1([]() {
-        for (int i = 0; i < 1000; ++i) {
-            ConnectionPool* cp = ConnectionPool::GetInstance();
+        for (int i = 0; i < 250; ++i) {
             shared_ptr<Connection> sp = cp->getConnection();
             char sql[1024] = {0};
             sprintf(sql, "INSERT INTO user (name, age, sex) VALUES('%s', '%d', '%s')", "zhangsan", 20, "male");
@@ -25,8 +24,7 @@ int main()
     });
 
     thread t2([]() {
-        for (int i = 0; i < 1000; ++i) {
-            ConnectionPool* cp = ConnectionPool::GetInstance();
+        for (int i = 0; i < 250; ++i) {
             shared_ptr<Connection> sp = cp->getConnection();
             char sql[1024] = {0};
             sprintf(sql, "INSERT INTO user (name, age, sex) VALUES('%s', '%d', '%s')", "zhangsan", 20, "male");
@@ -35,8 +33,7 @@ int main()
     });
 
     thread t3([]() {
-        for (int i = 0; i < 1000; ++i) {
-            ConnectionPool* cp = ConnectionPool::GetInstance();
+        for (int i = 0; i < 250; ++i) {
             shared_ptr<Connection> sp = cp->getConnection();
             char sql[1024] = {0};
             sprintf(sql, "INSERT INTO user (name, age, sex) VALUES('%s', '%d', '%s')", "zhangsan", 20, "male");
@@ -45,14 +42,15 @@ int main()
     });
 
     thread t4([]() {
-        for (int i = 0; i < 1000; ++i) {
-            ConnectionPool* cp = ConnectionPool::GetInstance();
+        for (int i = 0; i < 250; ++i) {
             shared_ptr<Connection> sp = cp->getConnection();
             char sql[1024] = {0};
             sprintf(sql, "INSERT INTO user (name, age, sex) VALUES('%s', '%d', '%s')", "zhangsan", 20, "male");
             sp->update(sql);
         }
     });
+
+
 
     t1.join();
     t2.join();
