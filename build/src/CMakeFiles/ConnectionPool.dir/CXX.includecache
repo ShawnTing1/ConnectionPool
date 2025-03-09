@@ -48,6 +48,14 @@ CommonConnectionPool.h
 public.h
 /home/dingshuo/ConnectionPool/src/public.h
 
+/home/dingshuo/ConnectionPool/src/Connection.cpp
+pch.h
+/home/dingshuo/ConnectionPool/src/pch.h
+public.h
+/home/dingshuo/ConnectionPool/src/public.h
+Connection.h
+/home/dingshuo/ConnectionPool/src/Connection.h
+
 /home/dingshuo/ConnectionPool/src/main.cpp
 pch.h
 /home/dingshuo/ConnectionPool/src/pch.h
